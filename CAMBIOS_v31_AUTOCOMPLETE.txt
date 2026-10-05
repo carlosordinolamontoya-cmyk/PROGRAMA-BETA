@@ -1,0 +1,29 @@
+CAMBIOS v31 - AUTOCOMPLETADO CONTROLADO
+
+Base: v30_fix_solicitantes.
+
+Mejoras implementadas:
+- Autocompletado en campos de solicitante.
+- Autocompletado en campos de código de artículo.
+- Autocompletado en campos de proveedor/RUC dentro de OC.
+- No se agregó autocompletado a centro de costo, OT, OC, requerimientos ni vales, según indicación del usuario.
+
+Comportamiento:
+- Al escribir, aparece una lista de coincidencias.
+- Flecha arriba/abajo permite moverse en la lista.
+- Enter selecciona la coincidencia activa.
+- Doble clic/clic selecciona la coincidencia.
+- Esc cierra la lista.
+- Shift+F1/Shift+F2 se mantiene como ayuda completa.
+
+Dónde se aplicó:
+- Ingreso / salida manual: solicitante y artículo.
+- Transferencia entre almacenes: solicitante y artículo.
+- Registro de requerimiento: solicitante y artículo.
+- Nueva Orden de Compra: proveedor/RUC y solicitante.
+- Editor de ítem de OC: artículo y solicitante.
+- Modificación de OC pendiente: proveedor/RUC.
+
+Validación ejecutada:
+- python -m py_compile app_kardex.py
+- xvfb-run -a python pruebas_v31_autocomplete.py

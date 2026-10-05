@@ -1,0 +1,38 @@
+CAMBIOS v19 - Proveedores, matriz OC por requerimiento y barras de desplazamiento
+
+1. Consulta RUC API
+- Se corrigió el mapeo de razón social para respuestas anidadas tipo data/result/response.
+- Se valida que el RUC devuelto por la API coincida con el RUC consultado.
+- Si la API devuelve datos del proveedor de API o un RUC distinto, el sistema bloquea el guardado y muestra error claro.
+- La consulta API en la pantalla de proveedores ya no guarda automáticamente; solo carga datos en pantalla para que el usuario complete teléfono, email, banco, cuenta, CCI y contacto antes de guardar.
+
+2. Nuevo proveedor
+- Se mantiene registro manual de teléfono, email, banco, cuenta, CCI y contacto.
+- Se preservan datos bancarios ya registrados si se vuelve a consultar el RUC por API.
+
+3. Orden de compra por requerimiento
+- Se agregó forma de pago como lista desplegable: CONTADO, CREDITO 15 DIAS, CREDITO 30 DIAS, 50% INICIAL/50% FINAL.
+- La forma de pago seleccionada se guarda en cada OC generada desde la matriz multiproveedor.
+- Se agregó advertencia si un mismo item tiene precio en más de un proveedor, para evitar generar OCs duplicadas accidentalmente por el mismo producto.
+
+4. Barras de desplazamiento
+- Se agregaron barras verticales y horizontales en cuadros críticos:
+  * Búsqueda de requerimientos.
+  * Búsqueda de OC.
+  * Maestro/búsqueda de proveedores.
+  * Selector de artículos.
+  * Nueva OC - detalle de items.
+  * Registro de entrada con OC.
+  * Lista/consulta de OC.
+  * Aprobación de OC.
+  * Tipo de cambio.
+  * Matriz de OC por requerimiento ya mantenía barras vertical/horizontal.
+
+5. Validaciones adicionales
+- Se validó forma de pago al crear la OC.
+- Se mantiene bloqueo de OC activa duplicada por mismo requerimiento y proveedor, salvo que la anterior esté ANULADA, DENEGADA o LIQUIDADA.
+
+Pruebas realizadas:
+- Compilación Python: OK.
+- pruebas_oc_erp.py: 2 pasadas OK.
+- pruebas_v19_correcciones.py: OK.

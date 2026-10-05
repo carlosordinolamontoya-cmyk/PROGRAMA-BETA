@@ -1,0 +1,86 @@
+CAMBIOS v28 - Ajustes QA / UX / OC / Valorización
+
+Base: v27 limpio vales.
+Tipo de entrega: código limpio para abrir en VS Code, sin .exe y sin base demo.
+
+Correcciones y mejoras aplicadas:
+
+1. Solicitantes
+- Se mantiene la lógica de solicitantes como texto visible en pantallas.
+- Los cuadros de búsqueda siguen mostrando nombres registrados en Configuración > Solicitantes.
+- Se reforzó la actualización visual al crear usuarios para que aparezcan en la lista.
+
+2. Registrar artículo / consulta de artículos
+- Mejorada la consulta/modificación de artículos.
+- Ahora muestra correctamente artículos usando search_articulos().
+- Se agregaron columnas Valoriza y Decimales en consulta/modificación.
+- Al guardar modificación conserva valoriza y permite decimales.
+
+3. Matriz de cotización por requerimiento
+- Las columnas dinámicas de proveedor ya no dicen Proveedor 1/2/3.
+- Ahora muestran la razón social real del proveedor y la moneda.
+
+4. Detalle de Orden de Compra
+- Se refuerza la visualización de items, cantidades, precios, IGV y total.
+- Si una OC no tuviera items, aparece una fila clara indicando SIN ITEMS REGISTRADOS.
+
+5. Finanzas / pagos OC
+- El seguimiento financiero ya no oculta automáticamente las OC pagadas.
+- El check ahora se llama Solo pendientes/saldo y viene desmarcado por defecto.
+- En Registro/Consulta de OC se muestra estado operativo, estado de pago y avance total visual.
+- Si una OC se paga antes de tránsito/recepción, el avance visual sube como mínimo a 50%, sin romper el estado operativo.
+
+6. Ingreso / salida manual
+- Se agregó columna Stock actual en la grilla.
+- Al cargar un código se muestra el stock del almacén seleccionado.
+- Para tipo CO, el precio sin IGV se jala automáticamente del último costo valorizado disponible y queda bloqueado.
+- Para CN/AJ el precio sigue editable.
+
+7. Nueva Orden de Compra
+- Al escribir RUC y presionar Enter se carga el proveedor.
+- Shift + F1 en RUC abre búsqueda de proveedores.
+- Al guardar una OC se abre automáticamente la previsualización de impresión.
+
+8. Liquidación de OC
+- Al liquidar correctamente se limpian los campos para buscar/liquidar otra OC.
+
+9. Requerimientos
+- Se agregó Fecha de entrega solicitada en cabecera del requerimiento.
+- Se guarda en base de datos como fecha_entrega_solicitada.
+- Se muestra en detalle, consulta y exportación de requerimientos.
+
+10. Reporte de órdenes de compra/logística
+- Se agregan columnas para análisis de cumplimiento:
+  - Fecha solicitud requerimiento.
+  - Fecha entrega solicitada requerimiento.
+  - Fecha registro de entrada.
+  - Fecha entrega OC.
+- Se corrigieron cabeceras/etiquetas del reporte Excel.
+
+11. Reporte de valorización mensual
+- Se agregaron columnas:
+  - Precio soles sin IGV.
+  - Precio soles con IGV.
+  - Precio dólares sin IGV.
+  - Precio dólares con IGV.
+  - Destino centro de costo.
+  - Destino OT.
+- El precio en USD se calcula como referencia solo si existe TC registrado.
+
+12. Tipo de cambio
+- Se mantiene en Finanzas.
+- También se agregó acceso desde Configuración > Tipo de Cambio.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v19_correcciones.py
+- python pruebas_v21_integrales.py
+- python pruebas_v22_finanzas_credito.py
+- python pruebas_v23_ux_funcional.py
+- python pruebas_v24_valorizacion.py
+- xvfb-run -a python pruebas_v26_dialogos_tc.py
+- xvfb-run -a python pruebas_v27_limpio_vales.py
+- xvfb-run -a python pruebas_ui_visual_v21.py
+
+Resultado: OK.

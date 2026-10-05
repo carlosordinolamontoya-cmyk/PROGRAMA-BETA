@@ -1,0 +1,39 @@
+CAMBIOS v26 - DIÁLOGOS SHIFT+F1/F2 Y TIPO DE CAMBIO DIARIO
+
+Base: v25 demo 20 registros.
+Entrega: carpeta limpia para abrir en VS Code. No contiene .exe.
+
+Correcciones principales:
+
+1. Cuadros de ayuda SHIFT + F1 / SHIFT + F2
+- Corregida la propagación de eventos que hacía que se abrieran dos ventanas iguales.
+- En Consulta de Registro, SHIFT + F1 en número de vale ahora muestra solo la lista de vales.
+- En Tipo CN/CO/AJ, SHIFT + F1 ahora muestra ayuda de tipos de movimiento y ya no abre vales.
+- En Centro de Costo, SHIFT + F1 ahora muestra solo centros de costo y ya no abre vales.
+- En Solicitante, SHIFT + F1 muestra la lista de solicitantes cuando corresponde.
+- En Código de artículo, SHIFT + F1/F2 muestra artículo/stock y selecciona correctamente.
+- En Transferencia de Almacenes, se corrigió SHIFT + F1/F2 para centro de costo, solicitante y artículo.
+- En Atención de Requerimientos, se evitó apertura duplicada de la lista de requerimientos.
+
+2. Selección por teclado
+- Las listas auxiliares ahora preseleccionan el primer resultado cuando cargan datos.
+- Enter permite seleccionar en vales, requerimientos, artículos, centros de costo, solicitantes, OC y stock.
+- Al seleccionar una fila, la ventana auxiliar se cierra para no acumular ventanas.
+
+3. Proveedores / RUC
+- En Nuevo Proveedor, al escribir el RUC y presionar Enter se ejecuta la consulta RUC API.
+- Se mantiene el registro manual de teléfono, email, banco, cuenta, CCI y contacto.
+
+4. Tipo de cambio
+- Se rediseñó la ventana de Tipo de Cambio como registro diario mensual:
+  Día | Fecha | Compra | Venta | Fuente | Manual | Usuario | Registro.
+- El usuario puede escoger fecha, fuente, año y mes.
+- Puede cargar el tipo de cambio del día desde API.
+- Si la API no funciona, puede registrar compra/venta manualmente en el bloque inferior.
+- Se mantiene el uso de tipo de cambio congelado en las OC.
+
+5. Pruebas
+- Se agregó pruebas_v26_dialogos_tc.py.
+- Validado con py_compile.
+- Validado con pruebas visuales bajo xvfb.
+

@@ -1,0 +1,57 @@
+CAMBIOS v36 - Mejoras 2 / Word / Vales / UX
+
+Base: kardex_almacen_python_v35_dependencias_word
+
+1. Error python-docx
+- Se agregó carga automática de python-docx si falta la librería.
+- Si no puede instalarse, muestra instrucciones claras para ejecutar requirements_app.txt.
+- Se mantiene instalar_dependencias.bat / requirements_app.txt.
+
+2. Autocomplete / navegación por teclado
+- Se reforzó el uso de flechas en autocompletados.
+- Enter confirma la sugerencia visible.
+- Esc cierra sugerencias.
+
+3. OC por requerimiento - selección por OT
+- Se rediseñó la selección múltiple de requerimientos con columna de check.
+- Al marcar el primer requerimiento se bloquea la selección a la misma OT.
+- Los requerimientos de otra OT se muestran atenuados y no se pueden marcar.
+- Enter continúa con los requerimientos marcados.
+- Doble clic o Espacio marca/desmarca.
+- Se mantienen filtros por mes/año y búsqueda.
+
+4. Matriz de cotización
+- Se retiró IGV de la cabecera para evitar contradicción.
+- IGV, moneda y tipo de OC ahora se configuran por proveedor.
+- Se conserva la forma de pago general de la OC.
+- La grilla mantiene colores: gris sin precio / verde con precio.
+- Al generar OC ya no se cierra automáticamente la matriz.
+- Luego de generar, pregunta si se desea abrir el formato Word de la primera OC.
+
+5. Impresión de OC
+- Se elimina el botón Guardar Excel de la vista de formato OC.
+- El botón Imprimir ahora usa el Word, no el Excel.
+- Se mantiene Guardar Word.
+- Se agregó texto de vista previa del contenido que se enviará a Word.
+
+6. Aprobación de OC
+- Se agregó cabecera de filtros por OC/RUC/Proveedor.
+- Se agregó filtro por fecha: Día / Mes / Todos.
+- Se agregó opción para incluir/ver aprobadas.
+- La lista muestra RUC y usuario aprobador.
+
+7. Vale de almacén en Word
+- Se agregó generación de vale en Word para ingresos/salidas/ajustes.
+- Se agregó plantilla editable Vale_Almacen_Plantilla.docx.
+- En la previsualización de vale se reemplazó Guardar Excel por Guardar Word.
+- El botón Imprimir ahora imprime/genera Word.
+
+8. Pruebas ejecutadas
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v24_valorizacion.py
+- xvfb-run -a python pruebas_v31_autocomplete.py
+- xvfb-run -a python pruebas_v32_decimal_ocdetalle.py
+- xvfb-run -a python pruebas_v34_mejoras_word_finanzas.py
+- xvfb-run -a python pruebas_v29_dialogos_visual.py
+- xvfb-run -a python pruebas_v36_mejoras2.py

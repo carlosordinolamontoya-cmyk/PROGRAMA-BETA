@@ -1,0 +1,42 @@
+Versión v24 - Reporte de valorización mensual de almacén
+
+Cambios principales:
+- Agregado menú Reportes > Reporte de Valorización Mensual.
+- Nueva ventana de valorización mensual con selección de año, mes y almacén: TODOS, AQP o MIN.
+- Vista previa con barras vertical y horizontal.
+- Exportación a Excel del reporte valorizado.
+- Método implementado: Promedio ponderado móvil.
+- El reporte incluye solo artículos marcados como valorizables.
+- Las entradas se valorizan con precio unitario sin IGV registrado en el movimiento.
+- Las salidas se valorizan usando el costo promedio móvil disponible antes de la salida.
+- Las transferencias trasladan el costo promedio desde el almacén origen hacia el almacén destino.
+- Se agregan observaciones cuando existe una entrada sin precio o una salida sin costo promedio previo.
+
+Columnas principales:
+- Periodo
+- Almacén
+- Código
+- Descripción
+- Unidad
+- Stock inicial
+- Valor inicial
+- Entradas
+- Valor entradas
+- Salidas
+- Valor salidas
+- Ajustes de entrada/salida
+- Stock final
+- Costo promedio final
+- Valor final
+- Método
+- Observación
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v19_correcciones.py
+- python pruebas_v21_integrales.py
+- python pruebas_v22_finanzas_credito.py
+- python pruebas_v23_ux_funcional.py
+- python pruebas_v24_valorizacion.py
+- xvfb-run -a python pruebas_ui_visual_v21.py

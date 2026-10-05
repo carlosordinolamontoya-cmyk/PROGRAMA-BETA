@@ -1,0 +1,632 @@
+[
+  {
+    "codigo": "1",
+    "descripcion": "DISCO POLIFAN DE 7\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "2",
+    "descripcion": "DISCO POLIFAN DE 4\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "3",
+    "descripcion": "DISCO ESCOBILLA DE 7\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "4",
+    "descripcion": "DISCO ESCOBILLA DE 4\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "5",
+    "descripcion": "DISCO DESBASTE DE 7\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "6",
+    "descripcion": "DISCO DESBASTE DE 4\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "7",
+    "descripcion": "DISCO DE CORTE DE 4\" 1/8",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "8",
+    "descripcion": "DISCO DE CORTE DE 7\" 1/8",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "9",
+    "descripcion": "DISCO DE CORTE DE 4\" 3/64",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "10",
+    "descripcion": "DISCO DE CORTE DE 7\" 1/16",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "11",
+    "descripcion": "DISCO COPA TRENZADO 4\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "12",
+    "descripcion": "DISCO PARA TRONZADORA",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "13",
+    "descripcion": "TRAJE TYVEX XL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "14",
+    "descripcion": "TRAJE TYVEX L",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "15",
+    "descripcion": "TRAJE TYVEX CON CINTA REFLECTIVA XL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "16",
+    "descripcion": "TRAJE TYVEX AMARILLO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "17",
+    "descripcion": "RESPIRADOR MEDIA CARA 3M",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "18",
+    "descripcion": "CLIPS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "19",
+    "descripcion": "MICA FACIAL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "20",
+    "descripcion": "OREJERAS 3M",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "21",
+    "descripcion": "FILTRO 2097 3M IMITACION",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "22",
+    "descripcion": "SOBRELENTES OSCUROS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "23",
+    "descripcion": "SOBRELENTES CLAROS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "24",
+    "descripcion": "LENTES CLARO SP200",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "25",
+    "descripcion": "LENTES OSCURO SP200",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "26",
+    "descripcion": "BARBIQUEJO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "27",
+    "descripcion": "FILTRO 6006 3M",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "28",
+    "descripcion": "GUANTES DE BADANA STEEL PRO",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "29",
+    "descripcion": "GUANTES DE BADANA BLANCO",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "30",
+    "descripcion": "GUANTES ANTICORTE SEGPRO",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "31",
+    "descripcion": "CHALECO VERDE LIMON XL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "32",
+    "descripcion": "CHALECO VERDE LIMON L",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "33",
+    "descripcion": "CHALECO VERDE LIMON M",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "34",
+    "descripcion": "GUANTES ANTIACIDO",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "35",
+    "descripcion": "GUANTES DE SOLDADOR KAMASA",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "36",
+    "descripcion": "UNIFORME TERMICO L",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "37",
+    "descripcion": "ZAPATO SANDER MONTERO FULL T:42",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "38",
+    "descripcion": "ZAPATO SANDER MONTERO FULL T:41",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "39",
+    "descripcion": "ZAPATO SANDER MONTERO FULL T:40",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "40",
+    "descripcion": "ZAPATO SANDER MONTERO FULL T.39",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "41",
+    "descripcion": "ZAPATO DIELECTRICO T:41",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "42",
+    "descripcion": "ELECTRODO 7018 SUPERCITO",
+    "unidad_medida": "KG",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "43",
+    "descripcion": "ELECTRODO 7018 FACILITO",
+    "unidad_medida": "KG",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "44",
+    "descripcion": "ELECTRODO 6011 FACILITO 1/8",
+    "unidad_medida": "KG",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "45",
+    "descripcion": "ELECTRODO 6011 FACILITO 1/16",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "46",
+    "descripcion": "BLOQUEADOR SOLAR 50FPS X1L DERMOSOL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "47",
+    "descripcion": "GUANTES DE NITRILO TPOUCHNTUFFN",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "48",
+    "descripcion": "TRAJE TYVEX XXL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "49",
+    "descripcion": "FILTRO 6003 3M",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "50",
+    "descripcion": "LIJAR DE AGUA #100",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "51",
+    "descripcion": "LIJAR PARA METAL #80",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "52",
+    "descripcion": "LIJAR DE AGUA #180",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "53",
+    "descripcion": "LUNAS OSCURAS #12",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "54",
+    "descripcion": "LUNAS OSCURAS #11",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "55",
+    "descripcion": "LUNAS CLARAS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "56",
+    "descripcion": "PIEDRA P/CHISPERO X1",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "57",
+    "descripcion": "PIEDRA P/CHISPERO X3",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "58",
+    "descripcion": "TIZA CALDERA",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "59",
+    "descripcion": "PUNTA DE CONTACTO 1,0",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "60",
+    "descripcion": "PUNTA DE CONTACTO 1,2",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "61",
+    "descripcion": "PUNTA DE CONTACTO 1,6",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "62",
+    "descripcion": "PUNTA DE CONTACTO DAF 1,2",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "63",
+    "descripcion": "CAPUCHON DE RETENCION-420135",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "64",
+    "descripcion": "DEFLECTOR-420399",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "65",
+    "descripcion": "BOQUILLA P/PLASMA -220930",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "66",
+    "descripcion": "ELECTRODO P/PLASMA -420132",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "67",
+    "descripcion": "ELECTRODO P/PLASMA -220842",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "68",
+    "descripcion": "BOQUILLA P/PLASMA -220990",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "69",
+    "descripcion": "BOQUILLA P/PLASMA -420134",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "70",
+    "descripcion": "BOQUILLA P/PLASMA -220941",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "71",
+    "descripcion": "BOQUILLA P/PLASMA -220992",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "72",
+    "descripcion": "BOQUILLA P/PLASMA -220818",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "73",
+    "descripcion": "220931",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "74",
+    "descripcion": "LAPICERO AZUL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "75",
+    "descripcion": "HOJA BOND",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "76",
+    "descripcion": "ARCHIVADOR A4 ANCHO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "77",
+    "descripcion": "RESALTADOR AMARILLO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "78",
+    "descripcion": "MICAS A4",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "79",
+    "descripcion": "FILES",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "80",
+    "descripcion": "PLUMON INDELEBLE GRUESO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "81",
+    "descripcion": "PLUMON INDELEBLE DELGADO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "82",
+    "descripcion": "TRAPO INDUSTRIAL",
+    "unidad_medida": "KG",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "83",
+    "descripcion": "FILM 20\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "84",
+    "descripcion": "THINER ACRILICO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "85",
+    "descripcion": "CINTA AISLANTE NEGRO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "86",
+    "descripcion": "CINTA AISLANTE ROJO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "87",
+    "descripcion": "CINTA AISLANTE AMARILLO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "88",
+    "descripcion": "CINTA AISLANTE VERDE",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "89",
+    "descripcion": "CINTA AISLANTE BLANCO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "90",
+    "descripcion": "ZAPATO SANDER MONTERO FULL T:43",
+    "unidad_medida": "PAR",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "91",
+    "descripcion": "CINTA DE EMBALAJE 100Y",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "92",
+    "descripcion": "LLAVE FRANCESA 12\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "93",
+    "descripcion": "PINTURA SPRAY NARANJA",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "94",
+    "descripcion": "CINTA MASKING 1,1/2",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "95",
+    "descripcion": "SILICONA WHITW AROMATIZADO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "96",
+    "descripcion": "CINTA MASKING 2\"",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "97",
+    "descripcion": "GRASA ROJA VISTONY",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "98",
+    "descripcion": "MARCADOR BLANCO P/METAL",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "99",
+    "descripcion": "RETENEDOR 501-3M",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "100",
+    "descripcion": "SACO BLANCO",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "101",
+    "descripcion": "NYLON 90MM",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "102",
+    "descripcion": "CANDADO TRAVEX",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "103",
+    "descripcion": "CINTA AISLANTE GRIS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "104",
+    "descripcion": "OPALUX 3 ENTRADAS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  },
+  {
+    "codigo": "105",
+    "descripcion": "TAPON DE OIDOS",
+    "unidad_medida": "UND",
+    "tipo_articulo": "CONSUMIBLE"
+  }
+]

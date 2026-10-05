@@ -1,0 +1,21 @@
+Cómo abrir esta versión en VS Code
+
+1. Descomprime el ZIP.
+2. Abre la carpeta en VS Code.
+3. Instala dependencias si hace falta:
+   pip install -r requirements.txt
+4. Ejecuta:
+   python app_kardex.py
+
+Usuario inicial:
+- Usuario: admin
+- Contraseña: admin123
+
+Esta versión no incluye data demo ni base kardex_almacen.db.
+La base se crea automáticamente al iniciar el sistema.
+
+Para validar la consulta de vales:
+1. Registra un ingreso manual CN o una salida CO.
+2. Ve a Almacén > Consultar Vale.
+3. Presiona Shift + F1 en Número de Vale.
+4. Debe aparecer la lista de vales generados.

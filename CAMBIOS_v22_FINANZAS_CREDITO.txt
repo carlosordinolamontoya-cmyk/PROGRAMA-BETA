@@ -1,0 +1,57 @@
+CAMBIOS v22 - Seguimiento financiero independiente del avance operativo
+
+Problema corregido:
+- Antes el estado PAGADA/PAGO PARCIAL competía con el estado operativo de la OC.
+- Si una OC a crédito llegaba a EN TRANSITO, ATENDIDA o LIQUIDADA, Finanzas podía perder visibilidad del saldo pendiente.
+
+Solución implementada:
+1. Se separó el control operativo/logístico del control financiero.
+   - estado: flujo operativo (APROBADA, EN TRANSITO, ATENDIDA, LIQUIDADA, etc.)
+   - avance: porcentaje operativo (0%, 25%, 80%, 100%)
+   - estado_pago: flujo financiero (POR PAGAR, PAGO PARCIAL, PAGADA, VENCIDA)
+   - fecha_vencimiento_pago: fecha de pago calculada por forma de pago
+   - monto_pagado_cache: acumulado pagado para consultas rápidas
+
+2. La forma de pago calcula vencimiento:
+   - CONTADO: vence en la fecha de emisión de la OC
+   - CREDITO 15 DIAS: vence 15 días después de la fecha de OC
+   - CREDITO 30 DIAS: vence 30 días después de la fecha de OC
+   - 50% INICIAL/50% FINAL: vence en la fecha de entrega si existe; si no, en la fecha de OC
+
+3. Registrar pago ya NO cambia el estado operativo.
+   Ejemplo:
+   - OC EN TRANSITO + pago total -> estado operativo sigue EN TRANSITO, estado_pago pasa a PAGADA.
+   - OC ATENDIDA 100% a crédito sin pago -> estado operativo ATENDIDA, avance 100%, estado_pago POR PAGAR o VENCIDA.
+
+4. Nuevo módulo de Finanzas:
+   Finanzas > Seguimiento de Pagos OC
+   Permite ver:
+   - OC
+   - proveedor
+   - forma de pago
+   - fecha de vencimiento
+   - total
+   - pagado
+   - saldo
+   - estado de pago
+   - estado operativo
+   - avance operativo
+
+5. El reporte de OC ahora incluye datos financieros:
+   - forma de pago
+   - vencimiento de pago
+   - monto pagado
+   - saldo
+   - estado de pago
+   - estado operativo
+   - avance operativo
+
+6. Se permite registrar pagos incluso si la OC ya está ATENDIDA o LIQUIDADA, siempre que no esté PENDIENTE, EN COTIZACION, DENEGADA o ANULADA.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v19_correcciones.py
+- python pruebas_v21_integrales.py
+- python pruebas_v22_finanzas_credito.py
+- xvfb-run -a python pruebas_ui_visual_v21.py

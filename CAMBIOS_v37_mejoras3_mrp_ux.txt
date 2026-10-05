@@ -1,0 +1,48 @@
+CAMBIOS v37 - Mejoras 3 / UX MRP / Word
+
+Base: v36_mejoras2_word_vales_ux.
+
+Cambios implementados:
+1. Matriz de cotización:
+   - Ventana ampliada y con tamaño mínimo para evitar que se oculten botones.
+   - Botones finales más claros: Visualizar requerimiento, Generar OC y Cerrar.
+   - Después de generar las OC y mostrar la opción de Word, la matriz se cierra automáticamente.
+   - Se mantiene la configuración de moneda, tipo OC e IGV por proveedor; se evita duplicidad en la cabecera.
+   - Se muestran símbolos de moneda en vistas previas de OC.
+
+2. Orden de Compra / Servicio:
+   - El flujo de impresión/guardar prioriza Word.
+   - Se dejó alias de seguridad para que cualquier llamada antigua a Guardar Excel use Guardar Word.
+   - La vista previa muestra el detalle de ítems con moneda, cantidad, precio y subtotal.
+   - Si una OC no tuviera detalle, la ventana muestra una fila informativa en lugar de quedar en blanco.
+
+3. Vales de almacén:
+   - Se incorporó la plantilla Word Vale_Almacen_Plantilla.docx enviada por el usuario.
+   - El generador de Word de vales ahora usa la plantilla con placeholders: VALE, FECHA, DOCUMENTO, OT, CENTRO_COSTO, ALMACEN, SOLICITANTE, USUARIO, OBSERVACION e ítems 01-16.
+   - En búsqueda de vales se agregó botón Imprimir / Ver vale.
+   - Se mantiene filtro por tipo de operación CN/CO/AJ.
+   - Las llamadas antiguas a Excel para vales quedan redirigidas a Word.
+
+4. Tipo de cambio:
+   - Ventana ampliada para visualizar mejor la grilla mensual y el registro manual.
+   - Al ingresar Compra y presionar Enter, el cursor pasa a Venta.
+   - Al ingresar Venta y presionar Enter, el cursor pasa a Motivo.
+   - Al presionar Enter en Motivo, guarda el registro manual.
+
+5. Valorización mensual:
+   - Se agregó selección de moneda de reporte: SOLES / DOLARES.
+   - En soles muestra total valorizado en S/.
+   - En dólares muestra total estimado en US$ usando TC promedio de venta del mes cuando exista.
+   - El nombre del Excel exportado incluye la moneda seleccionada.
+
+6. Dependencias:
+   - requirements_app.txt y requirements.txt incluyen python-docx.
+   - El sistema mantiene carga/instalación automática de python-docx si falta.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- xvfb-run -a python pruebas_v36_mejoras2.py
+
+Observaciones técnicas:
+- Se recomienda seguir consolidando los diálogos de ayuda en un componente único para reducir duplicidad.
+- En una próxima fase se recomienda formalizar un dashboard de análisis: requerimientos atrasados, OC por vencer, compras por proveedor, consumo por centro de costo y rotación ABC.

@@ -1,0 +1,44 @@
+CAMBIOS v17 - Correcciones módulo OC
+
+1. Nueva OC
+- Se agregó búsqueda con SHIFT + F1 para requerimiento, solicitante y centro de costo.
+- Se agregó botón Buscar Req, Buscar Sol. y Buscar CC.
+- Al seleccionar requerimiento se cargan solicitante, centro de costo, OT, almacén y tipo.
+- Forma de pago ahora es lista desplegable: CONTADO, CREDITO 15 DIAS, CREDITO 30 DIAS, 50% INICIAL/50% FINAL.
+- Agregar/modificar item ahora usa una sola ventana con código, descripción, UM, cantidad, centro de costo, OT, solicitante y precio.
+- En código de artículo se agregó SHIFT + F1 para buscar artículos.
+
+2. Impresión / Excel de OC
+- Corregido error: MergedCell object attribute value is read-only.
+- Ahora el formato escribe solo en la celda superior izquierda de cada rango combinado.
+- Validado guardado de Excel de OC.
+
+3. Proveedores
+- Corregido guardado/actualización de teléfono, email, cuenta, CCI y contacto cuando el proveedor no tenía fuente SUNAT/API.
+- Se evitó el error por campo Fuente/Fecha vacío o con espacios.
+
+4. Pago de OC
+- Campo OC ahora tiene SHIFT + F1 y botón Buscar OC.
+- Al registrar pago correctamente se limpian todos los campos para registrar otro pago.
+
+5. OC en tránsito
+- Campo OC ahora tiene SHIFT + F1 y botón Buscar OC.
+
+6. Entrada con OC
+- Campo OC ahora tiene SHIFT + F1 y botón Buscar OC.
+- Botones cambiados a: Grabar, Ingreso parcial, Visualizar OC.
+
+7. Orden de Compra por Requerimiento
+- Campo Requerimiento ahora tiene SHIFT + F1.
+- Se rediseñó a matriz de precios por proveedor.
+- Permite agregar varios proveedores, cada uno con moneda y cotización.
+- Permite colocar precios diferentes por artículo y proveedor.
+- Al grabar genera una OC por cada proveedor con precios mayores a cero.
+- Ahora se permite más de una OC activa por requerimiento siempre que sea para proveedores distintos.
+- Se mantiene bloqueo de duplicado si el mismo proveedor ya tiene OC activa para ese requerimiento.
+
+8. Pruebas
+- Compilación Python correcta.
+- Pruebas automáticas existentes pasaron 2 veces.
+- Prueba adicional de OC multiproveedor pasó correctamente.
+- Prueba adicional de guardado Excel de OC pasó correctamente.

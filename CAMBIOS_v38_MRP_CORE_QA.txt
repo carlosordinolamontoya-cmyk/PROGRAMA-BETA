@@ -1,0 +1,63 @@
+VERSION v38 - MRP CORE / UX / QA
+
+Base utilizada:
+- kardex_almacen_python_v37_mejoras3_mrp_ux.zip
+
+Objetivo de la version:
+- Entregar una version real y limpia para VS Code, consolidando lo trabajado hasta v37.
+- No incluye .exe ni base demo.
+- Mantiene los formatos Word de OC/OS y vale de almacen.
+- Mantiene instaladores de dependencias para python-docx.
+
+Mejoras consolidadas:
+1. Estados separados para OC:
+   - Estado operativo.
+   - Estado financiero.
+   - Saldo y avance operativo.
+
+2. UX y cuadros de ayuda:
+   - Navegacion con flechas y Enter en cuadros auxiliares.
+   - Ventanas auxiliares cierran al seleccionar.
+   - Scroll vertical y horizontal en grillas extensas.
+
+3. Requerimientos y OT:
+   - Seleccion multiple de requerimientos vinculados a una misma OT.
+   - Evita mezclar requerimientos de OT distinta.
+   - Requerimientos atendidos/anulados no deben considerarse para generar OC.
+
+4. Matriz de cotizacion:
+   - Configuracion por proveedor de moneda, tipo de OC e IGV.
+   - Colores para celdas con/sin precio.
+   - Generacion de OC desde cotizaciones.
+
+5. Ordenes de compra:
+   - Formato Word editable por plantilla.
+   - Se prioriza formato Word frente a Excel.
+   - Visualizacion de cabecera, items, importes e historial.
+
+6. Vales de almacen:
+   - Formato Word editable usando Vale_Almacen_Plantilla.docx.
+   - Disponible para ingreso, salida y ajuste.
+
+7. Finanzas:
+   - Seguimiento de pagos separado del avance operativo.
+   - Registro de numero de factura.
+   - Control de saldos y pagos.
+
+8. Valorizacion:
+   - Reporte mensual con selector de moneda.
+   - Manejo de soles/dolares y valores con/sin IGV.
+
+9. Dependencias:
+   - requirements_app.txt incluye python-docx.
+   - instalar_dependencias.bat permite resolver el error de Word.
+
+10. QA tecnico:
+   - Compilacion Python validada con py_compile.
+
+Validacion ejecutada en esta entrega:
+- python -m py_compile app_kardex.py : OK
+
+Nota:
+- Esta version queda como base de trabajo para VS Code.
+- Si aparece algun error funcional especifico, reportarlo con captura y flujo exacto para corregirlo en v39.

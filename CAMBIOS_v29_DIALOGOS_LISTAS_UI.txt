@@ -1,0 +1,28 @@
+CAMBIOS v29 - Diálogos, listas y revisión visual
+
+Base: v28 ajustes QA limpia.
+
+Correcciones principales:
+- Consulta de Stock: se corrigió el Treeview para que la lista de artículos/stock se renderice dentro de su contenedor correcto.
+- Consulta/Modificación de Artículos: se corrigió el Treeview para que los artículos aparezcan correctamente.
+- Usuarios del Sistema: se corrigió el Treeview para que los usuarios creados se visualicen en la lista con usuario, nombre, rol, estado y fecha.
+- Solicitantes: se corrigió la lista de solicitantes y sus cuadros de búsqueda.
+- Centros de costo: se limpió el diálogo clásico y se dejó un único Treeview con scroll, Enter, doble clic y Esc.
+- Se reforzó la inspección visual de cuadros auxiliares con scroll vertical/horizontal donde corresponde.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v19_correcciones.py
+- python pruebas_v21_integrales.py
+- python pruebas_v22_finanzas_credito.py
+- python pruebas_v24_valorizacion.py
+- xvfb-run -a python pruebas_v26_dialogos_tc.py
+- xvfb-run -a python pruebas_v27_limpio_vales.py
+- xvfb-run -a python pruebas_v29_dialogos_visual.py
+- xvfb-run -a python pruebas_ui_visual_v21.py
+
+Resultado: OK.
+
+Nota:
+- El ZIP no incluye base kardex_almacen.db. Al iniciar el sistema se crea una base limpia con usuario admin y artículos iniciales desde productos_iniciales.json.

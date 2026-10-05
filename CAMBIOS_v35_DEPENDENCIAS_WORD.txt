@@ -1,0 +1,10 @@
+CAMBIOS v35 - DEPENDENCIAS WORD
+
+- Se agregó requirements_app.txt con dependencias mínimas del sistema.
+- Se agregó instalar_dependencias.bat para instalar openpyxl y python-docx en Windows.
+- Se agregó abrir_kardex.bat para verificar dependencias antes de iniciar.
+- Se agregó instalar_dependencias.ps1 como alternativa PowerShell.
+- Se mejoró el mensaje de error cuando falta python-docx.
+
+Nota: la opción Guardar Word necesita python-docx. En VS Code ejecutar:
+python -m pip install -r requirements_app.txt

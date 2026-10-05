@@ -1,0 +1,42 @@
+Versión v34 - Mejoras UX/OC/Finanzas/Word
+
+Base: kardex_almacen_python_v33_detalle_oc_items.zip
+
+Cambios principales:
+1. Autocomplete con flechas:
+   - Flecha arriba/abajo navega sugerencias.
+   - Flecha izquierda retrocede en sugerencias.
+   - Flecha derecha avanza en sugerencias.
+   - Enter selecciona y Esc cierra.
+
+2. Formato Word de Orden de Compra/Servicio:
+   - Se incorpora la plantilla Orden_Plantilla_ERP_Final_TIPO_DOC.docx.
+   - En la previsualización de OC se agrega botón Guardar Word.
+   - El sistema llena campos: TIPO_DOC, OC, FEC_LARGA, proveedor, dirección, RUC, teléfono, destino, término de pago, moneda, banco, cuenta, CCI, subtotal, IGV, total y hasta 16 líneas de detalle.
+   - Se priorizan los nombres del formato Word: DESTINO, TERMINO DE PAGO, MONEDA, CANT, UNID, DESCRIPCION, VALOR UNIT., IMPORTE.
+
+3. Finanzas:
+   - Registrar pago de OC ahora incluye campo Nro factura.
+   - El número de factura queda guardado en orden_compra_pagos.numero_factura.
+   - El historial y mapa de proceso muestran factura si existe.
+
+4. OC por requerimiento:
+   - Se agrega selección múltiple de requerimientos pendientes por mes/año.
+   - Solo permite unir requerimientos si pertenecen a la misma OT.
+   - Requerimientos atendidos o anulados no aparecen/no se permiten.
+   - La matriz conserva el flujo de precios por proveedor.
+   - Por proveedor se puede configurar tipo de OC, moneda e IGV.
+   - Al agregar proveedor se precarga el último precio comprado del artículo si existe.
+   - La matriz usa color gris claro cuando no hay precio y verde claro si hay precio ingresado.
+
+5. Aprobación parcial:
+   - Se reemplaza la pregunta item por item por una ventana dinámica.
+   - La ventana muestra todos los ítems y permite modificar la cantidad aprobada por item.
+   - Muestra el usuario aprobador.
+
+Pruebas realizadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- xvfb-run -a python pruebas_v31_autocomplete.py
+- xvfb-run -a python pruebas_v32_decimal_ocdetalle.py
+- xvfb-run -a python pruebas_v34_mejoras_word_finanzas.py

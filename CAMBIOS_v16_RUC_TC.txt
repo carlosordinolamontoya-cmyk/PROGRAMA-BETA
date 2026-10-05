@@ -1,0 +1,61 @@
+CAMBIOS v16 - RUC SUNAT/API, PROVEEDORES Y TIPO DE CAMBIO
+
+1. Maestro de proveedores / Nuevo proveedor
+- Se mantiene y mejora el módulo Proveedores.
+- Se agregó botón "Nuevo proveedor" para limpiar el formulario y registrar desde cero.
+- Se agregó botón "Consultar RUC API" para jalar razón social, dirección, estado, condición y ubigeo desde una API configurable.
+- Se agregaron campos tributarios al maestro:
+  estado_contribuyente, condicion_domicilio, ubigeo, fuente_ruc, fecha_validacion_ruc, respuesta_ruc_json.
+- Los datos bancarios no se sobreescriben desde API: banco, cuenta y CCI quedan manuales.
+
+2. Configuración de APIs
+- Nuevo menú: Configuración > Configuración de APIs.
+- Permite configurar:
+  URL API RUC
+  Token API RUC
+  URL API Tipo Cambio
+  Token API Tipo Cambio
+  Timeout
+- Las URLs pueden usar variables {ruc} y {fecha}.
+- Valores por defecto compatibles con una API pública/externa tipo APIS.NET/Decolecta, pero pueden cambiarse sin tocar código.
+
+3. Tipo de cambio
+- Nueva tabla tipo_cambio.
+- Nuevo menú: Finanzas > Tipo de Cambio.
+- Permite:
+  cargar TC desde API,
+  registrar TC manual,
+  consultar histórico,
+  usar un TC seleccionado en una OC.
+- Se registra compra, venta, fuente, usuario, fecha de registro y si fue manual.
+
+4. Orden de Compra en dólares
+- Se agregaron campos a orden_compra:
+  tipo_cambio,
+  tipo_cambio_compra,
+  tipo_cambio_venta,
+  tipo_cambio_fuente,
+  tipo_cambio_fecha.
+- Si la moneda es SOLES, el TC queda en 1.0000.
+- Si la moneda es DOLARES, la OC exige tipo de cambio.
+- El sistema busca TC local; si no existe intenta API; si falla, exige registro manual.
+- El tipo de cambio queda congelado en la OC emitida y no depende de cambios futuros.
+
+5. Pantalla de OC
+- Se agregó botón "Nuevo proveedor" desde la OC.
+- Se agregó botón "Cargar TC".
+- Se agregó botón "TC manual".
+- Al cargar proveedor se muestran advertencias si SUNAT/API informa estado diferente de ACTIVO o condición diferente de HABIDO.
+
+6. Formato impreso
+- El formato de Orden de Compra / Servicio incluye tipo de cambio cuando aplica.
+
+7. Pruebas automáticas
+- Se amplió pruebas_oc_erp.py para validar:
+  proveedor con campos tributarios,
+  registro manual de tipo de cambio,
+  OC en dólares con TC local,
+  flujos anteriores de OC, aprobación, recepción, pago, tránsito, liquidación y requerimiento.
+- Resultado:
+  PASADA 1: OK
+  PASADA 2: OK

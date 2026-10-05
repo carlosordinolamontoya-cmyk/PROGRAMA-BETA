@@ -1,0 +1,8 @@
+CAMBIOS v33 - DETALLE OC ITEMS VISIBLES
+
+- Se corrigió/reforzó la ventana Detalle de Orden de Compra.
+- El detalle de ítems ahora se consulta directamente desde orden_compra_detalle usando oc_id.
+- Se agregó etiqueta visible: Items de la orden (N registro(s)).
+- Se reforzó el Treeview con displaycolumns, encabezados fijos, altura mayor y scroll horizontal/vertical.
+- Si una OC no tiene detalle registrado, la grilla muestra una fila de advertencia en lugar de quedar vacía.
+- La cabecera, totales e historial se mantienen separados para evitar que el historial corte la sección de ítems.

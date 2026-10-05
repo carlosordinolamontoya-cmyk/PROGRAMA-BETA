@@ -1,0 +1,26 @@
+Versión v27 - Código limpio y corrección de consulta de vales
+
+Cambios principales:
+1. Se retiró la base de datos demo kardex_almacen.db del paquete.
+2. Se retiraron scripts y archivos de demo: cargar_demo_20_registros.py, borrar_datos_demo.py, LEEME_DEMO_20_REGISTROS.txt y CAMBIOS_v25_DEMO_20_REGISTROS.txt.
+3. Al abrir el sistema se genera una base nueva automáticamente con estructura, usuario admin y maestro inicial de artículos.
+4. Se corrigió Consulta de Vales Generados:
+   - La búsqueda ya no queda vacía por filtros anteriores.
+   - Permite buscar por vale, documento, OT, centro de costo, solicitante, usuario o requerimiento.
+   - Agrega filtros por almacén y tipo CN/CO/AJ.
+   - Muestra contador y mensaje claro si no existen vales.
+   - La tabla tiene scroll vertical y horizontal.
+5. Se corrigió la duplicidad de ventanas de ayuda en Consulta de Registro:
+   - Shift + F1 ya no abre dos diálogos iguales.
+   - Si ya hay una ayuda abierta, se trae al frente en lugar de crear otra.
+6. Se mantuvo Enter/doble clic para seleccionar y cerrar los cuadros auxiliares.
+7. Se agregó prueba específica pruebas_v27_limpio_vales.py.
+
+Validación ejecutada:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- xvfb-run -a python pruebas_v26_dialogos_tc.py
+- xvfb-run -a python pruebas_v27_limpio_vales.py
+
+Nota:
+Si abres Consulta de Vale en una base nueva, no aparecerán vales hasta registrar un ingreso/salida/ajuste o una recepción/atención que genere movimiento.

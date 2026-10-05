@@ -1,0 +1,17 @@
+CAMBIOS v20 - Proveedores: botón Guardar visible
+
+1. La ventana Proveedores / Nuevo proveedor ahora tiene botón "Guardar proveedor" visible en la barra superior.
+2. Se agregó otra fila de acciones dentro del bloque "Datos de proveedor" con:
+   - Guardar proveedor
+   - Seleccionar
+   - Limpiar / Nuevo
+   - Cerrar
+3. Se redujo la altura visual de la grilla superior para que el formulario y los botones no queden fuera de pantalla.
+4. Se agregó atajo Ctrl+S para guardar proveedor.
+5. Se mantuvo la captura manual de datos no devueltos por API/SUNAT: teléfono, email, banco, cuenta, CCI y contacto.
+
+Pruebas:
+- Compilación Python: OK
+- pruebas_oc_erp.py: 2 pasadas OK
+- pruebas_v19_correcciones.py: OK
+- Guardado manual de proveedor con cuenta, CCI, teléfono, email y contacto: OK

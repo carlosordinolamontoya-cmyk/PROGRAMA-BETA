@@ -1,0 +1,16 @@
+Kardex / MRP - Versión v39
+
+Abrir en VS Code:
+1. Descomprimir el ZIP.
+2. Abrir la carpeta en VS Code.
+3. Instalar dependencias:
+   python -m pip install -r requirements_app.txt
+4. Ejecutar:
+   python app_kardex.py
+
+Notas v39:
+- No incluye base demo ni .exe.
+- El tipo de cambio es obligatorio solo para OC en dólares y reportes valorizados en dólares.
+- Los requerimientos con OC activa ya no aparecen para generar nueva OC.
+- Las OC anuladas o denegadas liberan el requerimiento para volver a cotizar/comprar.
+- El formato Word de OC/OS imprime importes con símbolo de moneda.

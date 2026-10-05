@@ -1,0 +1,10 @@
+# Cambios v30 - Corrección solicitantes
+
+- Corregido error al agregar solicitante:
+  "SolicitudesDialog object has no attribute usuario".
+- Causa: el formulario de solicitantes intentaba resaltar el registro nuevo usando self.usuario,
+  atributo que pertenece al formulario de usuarios, no al diálogo de solicitantes.
+- Ahora guarda el nombre del solicitante en una variable local nuevo_solicitante y usa esa variable
+  para resaltar la fila recién creada/reactivada.
+- Corregido también un bug latente al desactivar solicitante: se usaba nuevo_usuario sin existir.
+- Validado con py_compile.

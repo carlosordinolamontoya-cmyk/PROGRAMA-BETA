@@ -1,0 +1,42 @@
+VERSIÓN v39 - MEJORAS 4 / TC / REPORTES / QA
+
+Base: v38_mrp_core_ux.
+
+Cambios aplicados:
+1. OC por requerimiento
+   - Los requerimientos con OC activa ya no aparecen en la lista pendiente para generar OC.
+   - Se considera OC activa toda OC que no esté ANULADA ni DENEGADA.
+   - El bloqueo aplica tanto a un requerimiento individual como a requerimientos unidos por la misma OT.
+   - Si la OC asociada se anula o deniega, el requerimiento vuelve a estar disponible para compra.
+
+2. Flujo de impresión/Word después de generar OC
+   - Al generar una o varias OC desde la matriz de cotización, el sistema permite abrir la vista Word de las OC generadas.
+   - La vista Word se abre usando la ventana principal como padre, para evitar que se cierre al cerrar la matriz de cotización.
+   - Luego de abrir/confirmar el flujo, la matriz se cierra correctamente.
+
+3. Formato Word de OC/OS
+   - Los valores monetarios del Word ahora incluyen símbolo de moneda:
+     S/ para SOLES y US$ para DOLARES.
+   - Aplica en valor unitario, importe, subtotal, IGV y total.
+
+4. Tipo de cambio
+   - Se siguió el criterio aprobado: el TC solo es obligatorio para operaciones valorizadas con conversión o reportes en dólares.
+   - Las OC en dólares ya exigen TC de la fecha.
+   - El reporte de valorización mensual en DOLARES ahora bloquea la consulta/exportación si no existe TC registrado para el mes.
+   - Las consultas simples y operaciones sin conversión no se bloquean.
+
+5. Reportes y QA
+   - Se validó valorización mensual en soles.
+   - Se validó bloqueo de valorización mensual en dólares sin TC.
+   - Se validó valorización mensual en dólares con TC registrado.
+   - Se validó que la OC Word incluya símbolo de moneda.
+   - Se validó que un requerimiento no pueda duplicar OC activa y que vuelva a quedar disponible si la OC se anula.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v24_valorizacion.py
+- xvfb-run -a python pruebas_v32_decimal_ocdetalle.py
+- python pruebas_v39_mejoras4.py
+
+Resultado: OK.

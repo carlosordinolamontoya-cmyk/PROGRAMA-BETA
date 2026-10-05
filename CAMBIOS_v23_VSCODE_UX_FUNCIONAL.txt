@@ -1,0 +1,90 @@
+CAMBIOS v23 - VS CODE / UX FUNCIONAL
+
+Base tomada: kardex_almacen_python_v22_finanzas_credito.zip
+Objetivo: entregar proyecto listo para abrir en VS Code, sin empaquetado EXE.
+
+Correcciones UX/UI y funcionales:
+
+1. Consulta de stock / ayudas de búsqueda
+- Corregido flujo de ayuda de stock con Shift+F2.
+- La ventana de stock muestra artículo, descripción, unidad, stock, comprometido y libre por almacén.
+- Enter selecciona el artículo marcado.
+- Doble clic selecciona el artículo.
+- Al seleccionar, la ventana de ayuda se cierra automáticamente.
+
+2. Ingreso / salida manual
+- Agregado precio unitario sin IGV en soles por línea.
+- Se calcula subtotal sin IGV por línea.
+- Se guarda precio_unitario_sin_igv y subtotal_sin_igv en movimiento_detalle.
+- La carga/consulta de vales muestra precios cuando existan.
+
+3. Cuadros de ayuda
+- Los cuadros de selección de vale, requerimiento, artículo, solicitante, centro de costo y OC cierran al seleccionar con Enter o doble clic.
+- Se revisaron accesos Shift+F1 / Shift+F2 en pantallas críticas.
+
+4. Reverso/anulación
+- Reversar vale ahora abre una ventana formal con campo de vale, búsqueda con Shift+F1/Shift+F2 y motivo obligatorio.
+- Anular requerimiento ahora abre una ventana formal con campo de requerimiento, búsqueda con Shift+F1/Shift+F2 y motivo obligatorio.
+
+5. Detalle de OC
+- Reorganizada la ventana de detalle de OC.
+- Cabecera y detalle quedan visibles.
+- El scroll queda orientado al historial de estados, que es la sección que crece con el tiempo.
+
+6. Maestro de artículos
+- Agregado check: Artículo valorizable.
+- Agregado check: Permite decimales.
+- Se agregaron campos en base de datos: valoriza y permite_decimales.
+
+7. Consulta / registro de OC
+- Agregado botón Modificar en consulta de OC.
+- Solo permite modificar OC en PENDIENTE o EN COTIZACION.
+- Bloquea modificar OC aprobadas, atendidas, en tránsito, liquidadas, anuladas o con movimientos.
+- Permite modificar campos de cabecera controlados: proveedor, cotización, observación, forma de pago, fecha entrega y lugar entrega.
+- No permite modificar datos heredados del requerimiento ni cantidades/items.
+
+8. Aprobación de OC
+- La pantalla de aprobación muestra pendientes/en cotización y también aprobadas/aprobadas parciales.
+- Se agregó opción Desaprobar / devolver a pendiente.
+- Bloquea desaprobar si la OC tiene pagos, tránsito, recepción o liquidación.
+
+9. Finanzas / seguimiento
+- Click derecho en seguimiento de pagos permite abrir Mapa de proceso.
+- Desde seguimiento, registrar pago abre la ventana y al guardar se cierra para volver al seguimiento.
+- Si se abre Registrar Pago OC directamente desde el menú, al guardar limpia campos y queda abierta para registrar otro pago.
+
+10. Mapa de proceso
+- Agregada ventana de trazabilidad de OC con pestañas: requerimiento, compra, pagos, transporte, recepciones e historial.
+- En consulta de requerimientos, click derecho permite ver estado operativo.
+- Estado operativo del requerimiento muestra artículos, stock, pendiente y OC asociadas.
+
+11. Bancos
+- Bancos se manejan por código:
+  01 BCP
+  02 BBVA
+  03 INTERBANK
+  04 SCOTIABANK
+  05 OTROS
+- Si se usa 05 OTROS, se guarda el nombre del banco informado.
+
+12. Transferencia de almacenes
+- Agregado campo número de guía.
+- Validación de guía en transferencia.
+- Revisado Shift+F1/Shift+F2 para búsqueda de artículos/stock en transferencia.
+
+13. Botones redundantes
+- En atención de requerimiento se retiró el concepto de Cargar como acción principal; Enter carga el requerimiento y el botón visible es Buscar.
+- En item de OC se reemplazó Cargar por Validar código para que sea más claro si el usuario digita manualmente.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- python pruebas_v19_correcciones.py
+- python pruebas_v21_integrales.py
+- python pruebas_v22_finanzas_credito.py
+- python pruebas_v23_ux_funcional.py
+- xvfb-run -a python pruebas_ui_visual_v21.py
+
+Notas de valorización:
+- La versión actual registra precio por movimiento y permite marcar artículos valorizables, pero aún no implementa costo promedio ponderado ni FIFO como cálculo de valorización contable automática.
+- Recomendación técnica para siguiente fase: implementar precio promedio ponderado móvil como método principal y dejar FIFO como opción futura por familia de artículos si se necesita trazabilidad por lote/capa de costo.

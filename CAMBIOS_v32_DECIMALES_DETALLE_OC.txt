@@ -1,0 +1,24 @@
+CAMBIOS v32 - Decimales en requerimientos y detalle OC
+
+Base: v31_autocomplete, sin data demo.
+
+Correcciones aplicadas:
+1. Validación de cantidades decimales por artículo:
+   - Si un artículo fue creado con "Permite decimales" desmarcado, ya no permite 1.5, 2.25, etc. en requerimientos.
+   - La validación quedó a nivel de base de datos en KardexDB.validar_cantidad_articulo(), no solo en pantalla.
+   - También se aplica en la ventana de Registro de Requerimiento al agregar o modificar cantidades.
+
+2. Detalle de Orden de Compra:
+   - Rediagramada la ventana de detalle de OC.
+   - Los items de la OC ahora se muestran en un bloque propio con scroll vertical y horizontal.
+   - Se muestran código, descripción, UM, cantidad solicitada, aprobada, ingresada, pendiente, precio unitario, subtotal, IGV y total.
+   - El historial de estados ahora tiene un bloque más alto y su propio scroll vertical.
+   - Se agrandó la ventana y se definió tamaño mínimo para evitar cortes visuales.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py
+- python pruebas_oc_erp.py
+- xvfb-run -a python pruebas_v31_autocomplete.py
+- xvfb-run -a python pruebas_v32_decimal_ocdetalle.py
+
+Resultado: OK.

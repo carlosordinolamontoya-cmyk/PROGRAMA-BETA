@@ -1,0 +1,40 @@
+CAMBIOS v18 - MATRIZ DINÁMICA DE OC POR REQUERIMIENTO
+
+1. Flujo OC por requerimiento separado en dos pasos:
+   - Pantalla 1: selección/búsqueda de requerimiento con SHIFT + F1.
+   - Pantalla 2: matriz de cotización por proveedor.
+
+2. Nueva matriz editable:
+   - Columnas fijas: ITEM, DESCRIPCIÓN, UND, CANTIDAD.
+   - Columnas dinámicas: PROVEEDOR 1, PROVEEDOR 2, PROVEEDOR 3, etc.
+   - Los precios se ingresan directamente en la celda con doble clic.
+   - Ya no aparece una ventana por cada item para ingresar precios.
+
+3. Menú con clic derecho en la matriz:
+   - Agregar proveedor.
+   - Modificar proveedor.
+   - Eliminar proveedor.
+   - Limpiar precio de la celda seleccionada.
+
+4. Al agregar proveedor ahora se define:
+   - Proveedor.
+   - Número de cotización.
+   - Moneda: SOLES / DOLARES.
+   - Fecha de tipo de cambio.
+   - Tipo de cambio.
+   - Fuente del tipo de cambio.
+
+5. Tipo de cambio por proveedor:
+   - SOLES usa TC 1.0000.
+   - DOLARES permite cargar TC por API/local o registrarlo manualmente.
+   - El TC seleccionado se guarda congelado en la OC generada.
+
+6. Generación de OC:
+   - Por cada proveedor con precios mayores a cero se genera una OC.
+   - Cada OC incluye solo los artículos que tienen precio registrado en ese proveedor.
+   - Se mantiene bloqueo de duplicado por requerimiento + proveedor activo.
+
+7. Pruebas realizadas:
+   - Compilación del código: OK.
+   - Pruebas automáticas generales de OC/ERP: 2 pasadas OK.
+   - Prueba adicional de OC por requerimiento multiproveedor con proveedor en soles y proveedor en dólares con TC manual: OK.

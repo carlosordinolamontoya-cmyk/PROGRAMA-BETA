@@ -1,0 +1,29 @@
+Versión v21 - Revisión UX/UI, QA integral y preparación para ejecutable
+
+Correcciones UX/UI aplicadas:
+- Se revisaron los cuadros principales del sistema bajo una pasada visual con display virtual.
+- Se agregaron o verificaron barras de desplazamiento vertical/horizontal en listas y tablas críticas.
+- Se ajustó la ventana de Nueva Orden de Compra para mejorar visibilidad de cabecera, items e importes.
+- Se compactó Registro de Entrada con OC para que se vean mejor los campos y tabla de pendientes.
+- Se mantuvo visible el botón Guardar proveedor y se conservaron campos manuales de cuenta, CCI, teléfono, email y contacto.
+- Se validó que la matriz de OC por requerimiento tenga scroll y permita precios por proveedor.
+
+Correcciones funcionales / bugs detectados:
+- Se bloquea OC con precio unitario cero. El precio debe ser mayor a cero.
+- Se corrigió el pago registrado después de tránsito/atención para que no regrese visualmente el estado a PAGADA.
+- Se hizo atómica la generación multiproveedor desde requerimiento: si falla una OC del lote, no se guarda ninguna.
+- Se corrigió el reverso de ingresos por OC: ahora también reduce cantidad ingresada en la OC y recalcula estado.
+- Se corrigió el reverso de atenciones de requerimiento: ahora devuelve cantidad atendida y recalcula estado del requerimiento.
+- Se mejoró la validación de cantidad inválida en ingreso parcial de OC.
+- Se ajustó BASE_DIR para que, al generar ejecutable con PyInstaller, la base de datos y carpetas se creen junto al .exe.
+
+Pruebas ejecutadas:
+- python -m py_compile app_kardex.py: OK
+- pruebas_oc_erp.py: 2 pasadas OK
+- pruebas_v19_correcciones.py: OK
+- pruebas_v21_integrales.py: OK
+- pruebas_ui_visual_v21.py bajo Xvfb: OK
+
+Nota de ejecutable:
+- Este paquete incluye build_windows_exe.bat para generar KardexAlmacen.exe en Windows.
+- Por limitación del entorno Linux de generación, el .exe real de Windows debe compilarse en una PC Windows con Python instalado.

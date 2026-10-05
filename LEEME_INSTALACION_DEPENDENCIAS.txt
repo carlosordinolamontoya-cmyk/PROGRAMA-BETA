@@ -1,0 +1,18 @@
+PARA USAR LA OPCION GUARDAR WORD
+
+El sistema necesita la libreria python-docx para generar ordenes de compra en Word.
+
+OPCION RAPIDA:
+1. Abra esta carpeta en VS Code.
+2. Abra Terminal > New Terminal.
+3. Ejecute:
+
+   python -m pip install -r requirements_app.txt
+
+Tambien puede hacer doble clic en:
+
+   instalar_dependencias.bat
+
+Despues vuelva a abrir el sistema y use el boton Guardar Word.
+
+Si aparece que python no se reconoce, instale Python o marque la opcion "Add Python to PATH".

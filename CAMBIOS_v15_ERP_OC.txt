@@ -1,0 +1,49 @@
+VERSIÓN v15 ERP/MRP - MÓDULO ÓRDENES DE COMPRA
+
+Cambios principales:
+1. Login con selección de almacén de trabajo AQP/MIN.
+2. Tabla de permisos usuario-almacén y configuración desde Usuarios.
+3. Roles ampliados: ADMIN, OPERADOR, ALMACEN, LOGISTICA, FINANZAS, CONSULTA.
+4. Menú Requerimientos separado: Registro, Consulta y Anulación.
+5. Menú Logística con:
+   - Registro Orden de Compra
+   - Liquidación de Orden Compra
+   - Orden de Compra por Requerimiento
+   - Registro de Entrada con Orden de Compra
+   - Aprobación Orden de Compra
+   - Consulta de Orden de Compra
+   - Reporte de Órdenes Pendientes
+   - Proveedores
+   - Registrar OC en Tránsito
+6. Menú Finanzas con registro de pago de OC y consulta/reporte.
+7. Maestro de proveedores con RUC, razón social, dirección, teléfono, banco, cuenta, CCI, contacto y moneda preferida.
+8. Órdenes de compra nacionales y órdenes de servicio.
+9. Estados y trazabilidad:
+   PENDIENTE, EN COTIZACION, APROBADA, APROBADA PARCIAL, DENEGADA, ANULADA,
+   PAGO PARCIAL, PAGADA, EN TRANSITO, ATENDIDA PARCIALMENTE, ATENDIDA, LIQUIDADA.
+10. Avance automático:
+   0% pendiente/cotización, 25% aprobada, 50% pagada, 80% tránsito, 100% atendida/liquidada.
+11. Aprobación total/parcial/denegada por ADMIN.
+12. Restricción: ADMIN no puede aprobar más de lo solicitado.
+13. Restricción: almacén no puede recibir más de lo aprobado pendiente.
+14. Orden de servicio no genera movimiento Kardex.
+15. Registro de entrada por OC genera vale CN vinculado a la OC.
+16. Finanzas registra número de operación, banco, fecha y monto pagado.
+17. Logística registra tránsito con operador: Flores, Shalom, Marvisur, Comité 4 u Otros.
+18. Liquidación separada para bienes y servicios.
+19. Anulación de OC libera el requerimiento para volver a generar una OC.
+20. Formato Excel de Orden de Compra / Servicio para guardar o imprimir.
+21. Pruebas automáticas incluidas en pruebas_oc_erp.py.
+
+Restricciones implementadas:
+- No crear OC sin proveedor activo.
+- No crear OC sin items.
+- No crear OC con cantidad <= 0.
+- No crear OC con precio negativo.
+- No modificar moneda después de generada desde el flujo normal.
+- No recibir OC de servicio en Kardex.
+- No pagar OC pendiente, denegada, anulada o liquidada.
+- No poner en tránsito OC de servicio.
+- No liquidar OC nacional sin ingreso de almacén.
+- No anular OC con cantidades ya ingresadas.
+- No duplicar OC activa para el mismo requerimiento.

@@ -1,0 +1,19 @@
+KARDEX / MRP - VERSION v38
+
+Para abrir en VS Code:
+1. Descomprime este ZIP.
+2. Abre la carpeta en VS Code.
+3. Instala dependencias:
+   python -m pip install -r requirements_app.txt
+4. Ejecuta:
+   python app_kardex.py
+
+Usuario inicial:
+- Usuario: admin
+- Clave: admin
+
+Importante:
+- Esta version no incluye .exe.
+- Esta version no incluye base demo.
+- La base kardex_almacen.db se crea al ejecutar el sistema.
+- Para generar Word de OC o vales, instala python-docx con el archivo requirements_app.txt.
